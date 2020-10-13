@@ -1,0 +1,7 @@
+D:\MyStuff\ORT\AP\S50\P3\Ob\Solucion\ConsolaTemp\ConsolaTemp\bin\Debug\ConsolaTemp.exe.config
+D:\MyStuff\ORT\AP\S50\P3\Ob\Solucion\ConsolaTemp\ConsolaTemp\bin\Debug\ConsolaTemp.exe
+D:\MyStuff\ORT\AP\S50\P3\Ob\Solucion\ConsolaTemp\ConsolaTemp\bin\Debug\ConsolaTemp.pdb
+D:\MyStuff\ORT\AP\S50\P3\Ob\Solucion\ConsolaTemp\ConsolaTemp\obj\Debug\ConsolaTemp.csprojAssemblyReference.cache
+D:\MyStuff\ORT\AP\S50\P3\Ob\Solucion\ConsolaTemp\ConsolaTemp\obj\Debug\ConsolaTemp.csproj.CoreCompileInputs.cache
+D:\MyStuff\ORT\AP\S50\P3\Ob\Solucion\ConsolaTemp\ConsolaTemp\obj\Debug\ConsolaTemp.exe
+D:\MyStuff\ORT\AP\S50\P3\Ob\Solucion\ConsolaTemp\ConsolaTemp\obj\Debug\ConsolaTemp.pdb
