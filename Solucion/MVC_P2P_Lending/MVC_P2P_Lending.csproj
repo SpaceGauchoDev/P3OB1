@@ -172,10 +172,12 @@
     <Content Include="Views\Solicitante\MainMenuSolicitante.cshtml" />
     <Content Include="Views\Solicitante\ProyectosPorSolicitante.cshtml" />
     <Content Include="Views\Solicitante\PresentarProyecto.cshtml" />
+    <Content Include="Views\Admin\AsignarEvaluacion.cshtml" />
+    <Content Include="Views\Admin\ExportarInformacion.cshtml" />
+    <Content Include="Views\Admin\MainMenuAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

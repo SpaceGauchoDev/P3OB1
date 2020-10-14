@@ -5,6 +5,18 @@
 
 <h2>ProyectosPorSolicitante</h2>
 
+<table>
+    <tr>
+        <td>Proyectos: </td>
+    </tr>
+    @foreach (string pro in Model)
+    {
+        <tr>
+            <td>@pro</td>
+        </tr>
+    }
+
+</table>
 
 <div class="list-group">
 

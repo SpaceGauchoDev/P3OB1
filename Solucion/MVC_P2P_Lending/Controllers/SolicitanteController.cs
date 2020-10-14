@@ -35,13 +35,28 @@ namespace MVC_P2P_Lending.Controllers
 
         public ActionResult ProyectosPorSolicitante()
         {
-            /*
+            
             Usuario user = (Usuario)Session["usuario"];
+            /*
             Empleado e = Admin.Instancia.ObtenerEmpleadoPorUsuario(user);
 
             List<string> infoProyectos = Admin.Instancia.ListarProyectosPorEmpleado(e);
             */
-            return View(/*infoProyectos*/);
+
+            RProyecto rProyecto = new RProyecto();
+
+            Proyecto.S_Filtros filtros = new Proyecto.S_Filtros();
+            filtros.sCI = user.CI;
+
+            IEnumerable<Proyecto> proyectosPorUsuario = rProyecto.FindAllConFiltro(filtros);
+            List<string> proyectosPorUsuarioParseados = new List<string>();
+            foreach (Proyecto pro in proyectosPorUsuario)
+            {
+                string fila = pro.CISolicitante + " | " + pro.Titulo + " | " + pro.Etapa.ToString();
+                proyectosPorUsuarioParseados.Add(fila);
+            }
+
+            return View(proyectosPorUsuarioParseados);
         }
 
         public ActionResult PresentarProyecto()

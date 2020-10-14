@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "MainMenuAdmin";
+}
+
+<h2>Opciones Admin:</h2>
+
+<div class="list-group">
+    <div class="list-group-item">
+        <p>Asignar evaluacion a proyectos en estado pendiente evaluacion:</p>
+        <button onclick="location.href='@Url.Action("AsignarEvaluacion", "Admin")';return false;" class="btn btn-default">Asignar Evaluacion</button>
+    </div>
+
+    <div class="list-group-item">
+        <p>Exportar toda la informacion en la base de datos a un txt:</p>
+        <button onclick="location.href='@Url.Action("ExportarInformacion", "Admin")';return false;" class="btn btn-default">Exportar Informacion</button>
+    </div>
+
+    <div class="list-group-item">
+        <button onclick="location.href='@Url.Action("Logout", "Admin")';return false;" class="btn btn-default">Logout</button>
+    </div>
+</div>
