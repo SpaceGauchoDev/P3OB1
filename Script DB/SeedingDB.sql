@@ -37,11 +37,11 @@ INSERT INTO InteresPorCuotas VALUES (22, 0.21, 2)
 INSERT INTO InteresPorCuotas VALUES (23, 0.22, 2)
 INSERT INTO InteresPorCuotas VALUES (24, 0.23, 2)
 GO
-INSERT INTO Usuario VALUES (11, '11', 'A', 'Manuel', 'De Armas', '19900215', 'manuel@gmail.com', 099879995)
-INSERT INTO Usuario VALUES (22, '22', 'S', 'Pikachu', 'Lopez', '19950216', 'pikachu@gmail.com', 099879996)
-INSERT INTO Usuario VALUES (42935326, 'Aa1234', 'S', 'Gordon', 'Gordoñez', '19910217', 'gordon@gmail.com', 099879997)
-INSERT INTO Usuario VALUES (42935327, 'Aa1234', 'S', 'Sebastian', 'Sueldo', '20000218', 'sebastian@gmail.com', 099879998)
-INSERT INTO Usuario VALUES (42935328, 'Aa1234', 'S', 'Diego', 'Cazes', '19970219', 'diego@gmail.com', 099879999)
+INSERT INTO Usuario VALUES (11, '11', 'A', 'Manuel', 'De Armas', '19900215', 'manuel@gmail.com', '099879995')
+INSERT INTO Usuario VALUES (22, '22', 'S', 'Pikachu', 'Lopez', '19950216', 'pikachu@gmail.com', '099879996')
+INSERT INTO Usuario VALUES (44255447, 'Aa1234', 'S', 'Gordon', 'Gordoñez', '19910217', 'gordon@gmail.com', '099879997')
+INSERT INTO Usuario VALUES (35402180, 'Aa1234', 'S', 'Sebastian', 'Sueldo', '20000218', 'sebastian@gmail.com', '099879998')
+INSERT INTO Usuario VALUES (37754761, 'Aa1234', 'S', 'Diego', 'Cazes', '19970219', 'diego@gmail.com', '099879999')
 GO
 /*Pikachu Lopez*/
 INSERT INTO Proyecto VALUES (	'P',
@@ -86,7 +86,7 @@ INSERT INTO Proyecto VALUES (	'A',
 								1,
 								'ble ble ble',
 								'20200721',
-								42935326)
+								44255447)
 INSERT INTO Financiacion VALUES (6,8750, 50000, 0.05, 4, 2)
 INSERT INTO Evaluacion VALUES ('T', 9, '20200722', 4, 11)
 /*Sebastian Sueldo*/
@@ -98,7 +98,7 @@ INSERT INTO Proyecto VALUES (	'P',
 								2,
 								NULL,
 								'20200407',
-								42935327)
+								35402180)
 INSERT INTO Financiacion VALUES (18,8320, 128000,0.17, 5, 2)
 INSERT INTO Evaluacion VALUES ('F', NULL, NULL, 4, NULL)
 /*Diego Cazes*/
@@ -110,6 +110,6 @@ INSERT INTO Proyecto VALUES (	'R',
 								1,
 								'blu blu blu',
 								'20161207',
-								42935328)
+								37754761)
 INSERT INTO Financiacion VALUES (24,7687.5, 150000,0.23, 6, 2)
 INSERT INTO Evaluacion VALUES ('T', 4, '20161208', 6, 11)

@@ -24,7 +24,7 @@ CREATE TABLE 	Usuario(	CI int not null,
 							Apellido varchar (50) not null,
 							FechaDeNacimiento date not null,
 							Email varchar (50) not null,
-							Celular int)
+							Celular varchar(15))
 GO
 CREATE TABLE 	Proyecto(	IdProyecto int identity(1,1) not null,
 							Etapa char (1) not null,

@@ -3,3 +3,4 @@ D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\Dominio\bin\Debug\Dominio.pdb
 D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\Dominio\obj\Debug\Dominio.dll
 D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\Dominio\obj\Debug\Dominio.pdb
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache

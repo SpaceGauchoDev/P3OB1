@@ -16,62 +16,6 @@ namespace ConsolaTemp
         static void Main(string[] args)
         {
 
-            // agregar referencia, References->Add Reference.../Assemblies/System.Configuration
-            //string cs = ConfigurationManager.ConnectionStrings["miConexion"].ConnectionString;
-            //SqlConnection sc = new SqlConnection();
-            //sc.ConnectionString = cs;
-
-            /*
-            LeerUnaCelda(sc);
-            Console.WriteLine();
-            LeerUnaColumna(sc);
-            */
-
-
-            /*
-            Usuario user = new Usuario()
-            {
-            CI = 42935324,
-            Pass = "123",
-            Rol = Usuario.E_Rol.Admin,
-            Nombre = "pepe",
-            Apellido = "le pew",
-            FechaDeNacimiento = new DateTime(1990, 2, 15),
-            Celular = 099879995
-            };
-            */
-
-            /*
-            Solicitante sol = new Solicitante()
-            {
-                CI = 42935324,
-                Pass = "123",
-                Rol = Usuario.E_Rol.Admin,
-                Nombre = "pepe",
-                Apellido = "le pew",
-                FechaDeNacimiento = new DateTime(1990, 2, 15),
-                Celular = 099879995
-            };
-            */
-
-            /*
-            bool cedulaValida = sol.ValidarCI(32768558);
-            Console.WriteLine(cedulaValida);
-            */
-
-            RUsuario rUsuario= new RUsuario();
-            int ci = 230;
-
-            if (rUsuario.FindById(ci) != null)
-            {
-                Console.WriteLine("Encontro!");
-            }
-            else
-            {
-                Console.WriteLine("No encontro!");
-            }
-
-
             Console.WriteLine("end");
             Console.ReadLine();
         }
@@ -124,6 +68,44 @@ namespace ConsolaTemp
             // cierro la conexion con el servidor
             pSc.Close();
         }
+
+
+        static void AgregarUnUsuario()
+        {
+            Usuario user = new Usuario()
+            {
+                CI = 11115515,
+                Pass = "123",
+                Rol = Usuario.E_Rol.Solicitante,
+                Nombre = "pepe",
+                Apellido = "le pew",
+                FechaDeNacimiento = new DateTime(1990, 2, 15),
+                Email = "pitoEnCulo6969@gmail.com",
+                Celular = "099879995"
+            };
+
+            RUsuario rUsuario = new RUsuario();
+
+            if (rUsuario.FindById(user.CI) != null)
+            {
+                Console.WriteLine("Usuario ya existe!");
+            }
+            else
+            {
+                Console.WriteLine("Usuario no existe!");
+
+                if (rUsuario.Add(user))
+                {
+                    Console.WriteLine("Usuario agregado!");
+                }
+                else
+                {
+                    Console.WriteLine("Error de validacion!");
+                }
+            }
+        }
+
+
 
     }
 }

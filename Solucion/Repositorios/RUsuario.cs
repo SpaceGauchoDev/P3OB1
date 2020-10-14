@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.SqlClient;
 using Dominio;
-using System.Globalization;
 
 namespace Repositorios
 {
@@ -15,7 +14,50 @@ namespace Repositorios
     {
         public bool Add(Usuario pT)
         {
-            throw new NotImplementedException();
+            if (pT == null || !pT.Validar()) {
+                return  false;
+            }
+
+            Conexion connexion = new Conexion();
+            SqlConnection cn = connexion.CrearConexion();
+            SqlCommand cmd = new SqlCommand("INSERT INTO Usuario VALUES (@CI,@Pass,@Rol,@Nombre,@Apellido,@FechaDeNacimiento,@Email,@Celular)", cn);
+            cmd.Parameters.Add(new SqlParameter("@CI", pT.CI));
+            cmd.Parameters.Add(new SqlParameter("@Pass", pT.Pass));
+
+            if (pT.Rol == Usuario.E_Rol.Admin)
+            {
+                cmd.Parameters.Add(new SqlParameter("@Rol", 'A'));
+            }
+                 // TODO verificar que no hallan maneras mas seguras de implementar esta bifurcacion
+            else // if (pT.Rol == Usuario.E_Rol.Solicitante)
+            {
+                cmd.Parameters.Add(new SqlParameter("@Rol", 'S'));
+            }
+            cmd.Parameters.Add(new SqlParameter("@Nombre", pT.Nombre));
+            cmd.Parameters.Add(new SqlParameter("@Apellido", pT.Apellido));
+            string fechaParaDB = pT.FechaDeNacimiento.ToString("yyyyMMdd");
+            cmd.Parameters.Add(new SqlParameter("@FechaDeNacimiento", fechaParaDB));
+            cmd.Parameters.Add(new SqlParameter("@Email", pT.Email));
+            cmd.Parameters.Add(new SqlParameter("@Celular", pT.Celular));
+
+            try
+            {
+                if (connexion.AbrirConexion(cn))
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+            finally
+            {
+                connexion.CerrarConexion(cn);
+            }
         }
 
         public IEnumerable<Usuario> FindAll()
@@ -43,7 +85,6 @@ namespace Repositorios
                                 FechaDeNacimiento = (DateTime)dr["FechaDeNacimiento"],
                                 Celular = dr["Celular"].ToString(),
                                 Email = dr["Apellido"].ToString(),
-                                //FechaDeNacimiento = DateTime.ParseExact("20111120", "yyyyMMdd", CultureInfo.InvariantCulture)
                             };
                             usuarios.Add(s);
                         }
@@ -60,7 +101,6 @@ namespace Repositorios
                                 FechaDeNacimiento = (DateTime)dr["FechaDeNacimiento"],
                                 Celular = dr["Celular"].ToString(),
                                 Email = dr["Apellido"].ToString(),
-                                //FechaDeNacimiento = DateTime.ParseExact("20111120", "yyyyMMdd", CultureInfo.InvariantCulture)
                             };
                             usuarios.Add(a);
                         }
@@ -115,7 +155,6 @@ namespace Repositorios
                                 FechaDeNacimiento = (DateTime)dr["FechaDeNacimiento"],
                                 Celular = dr["Celular"].ToString(),
                                 Email = dr["Apellido"].ToString(),
-                                //FechaDeNacimiento = DateTime.ParseExact("20111120", "yyyyMMdd", CultureInfo.InvariantCulture)
                             };
                             usuario = s;
                         }
@@ -132,7 +171,6 @@ namespace Repositorios
                                 FechaDeNacimiento = (DateTime)dr["FechaDeNacimiento"],
                                 Celular = dr["Celular"].ToString(),
                                 Email = dr["Apellido"].ToString(),
-                                //FechaDeNacimiento = DateTime.ParseExact("20111120", "yyyyMMdd", CultureInfo.InvariantCulture)
                             };
                             usuario = a;
                         }
