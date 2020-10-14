@@ -6,18 +6,13 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Financiacion
+    public class InteresPorCuotas
     {
-        public int IdFinanciacion { get; set; }
         public int Cuotas { get; set; }
-        public decimal PrecioPorCuota { get; set; }
-        public decimal MontoSolicitado { get; set; }
         public decimal PorcentajeDeInteres { get; set; }
-
-        public int IdProyecto { get; set; }
         public int IdConfig { get; set; }
 
-        public Financiacion()
+        public InteresPorCuotas()
         {
 
         }

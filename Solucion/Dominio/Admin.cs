@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    class Admin: Usuario
+    public class Admin: Usuario
     {
 
+        public List<Evaluacion> Evaluaciones { get; set; }
 
+        public Admin()
+        {
 
-
+        }
     }
 }

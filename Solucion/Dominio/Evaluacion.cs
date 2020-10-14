@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    class Evaluacion
+    public class Evaluacion
     {
+        public int IdEvaluacion { get; set; }
+        public bool FueEvaluado { get; set; }
+        public int PuntajeDeEvaluacion { get; set; }
+        public int IdProyecto { get; set; }
+        public ulong CIAdmin { get; set; }
+
+        public Evaluacion()
+        {
+
+        }
     }
 }

@@ -45,7 +45,9 @@
     <Compile Include="Configuraciones.cs" />
     <Compile Include="Evaluacion.cs" />
     <Compile Include="Financiacion.cs" />
+    <Compile Include="InteresPorCuotas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proyecto.cs" />
     <Compile Include="Solicitante.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>

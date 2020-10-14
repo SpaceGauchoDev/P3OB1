@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    class Usuario 
+    public class Usuario 
     {
+        public enum E_Rol {Solicitante, Admin }
+
+        public ulong CI { get; set; }
+        public string Pass { get; set; }
+        public E_Rol Rol { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public DateTime FechaDeNacimiento { get; set; }
+        public ulong Celular { get; set; }
+        public string Email { get; set; }
+
+
+        public Usuario()
+        {
+
+        }
     }
 }

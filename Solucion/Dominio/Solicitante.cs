@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    class Solicitante:Usuario
+    public class Solicitante: Usuario
     {
 
+        public List<Proyecto> Proyectos { get; set; }
+
+        public Solicitante()
+        {
+
+        }
     }
 }
