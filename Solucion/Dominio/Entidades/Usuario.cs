@@ -8,7 +8,7 @@ namespace Dominio
 {
     public class Usuario 
     {
-        public enum E_Rol {Solicitante, Admin }
+        public enum E_Rol {Solicitante, Admin, NoRegistrado }
 
         public int CI { get; set; }
         public string Pass { get; set; }

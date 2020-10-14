@@ -28,8 +28,8 @@ namespace Repositorios
             {
                 cmd.Parameters.Add(new SqlParameter("@Rol", 'A'));
             }
-                 // TODO verificar que no hallan maneras mas seguras de implementar esta bifurcacion
-            else // if (pT.Rol == Usuario.E_Rol.Solicitante)
+                // TODO verificar que no hallan maneras mas seguras de implementar esta bifurcacion
+            else  if (pT.Rol == Usuario.E_Rol.Solicitante)
             {
                 cmd.Parameters.Add(new SqlParameter("@Rol", 'S'));
             }
@@ -198,6 +198,37 @@ namespace Repositorios
         public bool Update(Usuario pT)
         {
             throw new NotImplementedException();
+        }
+
+        public Usuario IntentoDeLogin(string pUser, string pPass)
+        {
+            Usuario u = null;  
+
+            if (Int32.TryParse(pUser, out int pUserParsed))
+            {
+                u = FindById(pUserParsed);
+            }
+            else
+            {
+                Console.WriteLine("String could not be parsed.");
+            }
+                
+
+            if (u != null)
+            {
+                if (u.Pass == pPass)
+                {
+                    return u;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

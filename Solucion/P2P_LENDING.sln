@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorios", "Repositorios\Repositorios.csproj", "{0864BF2F-3E0A-4BB4-A5EE-DD762960487B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "MVC\MVC.csproj", "{E6BD401F-EC39-4315-9E1C-E5BB48F90B1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_P2P_Lending", "MVC_P2P_Lending\MVC_P2P_Lending.csproj", "{292657EC-DB57-4A91-9004-D2295D3C5228}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{0864BF2F-3E0A-4BB4-A5EE-DD762960487B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0864BF2F-3E0A-4BB4-A5EE-DD762960487B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0864BF2F-3E0A-4BB4-A5EE-DD762960487B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E6BD401F-EC39-4315-9E1C-E5BB48F90B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6BD401F-EC39-4315-9E1C-E5BB48F90B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6BD401F-EC39-4315-9E1C-E5BB48F90B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6BD401F-EC39-4315-9E1C-E5BB48F90B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{292657EC-DB57-4A91-9004-D2295D3C5228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{292657EC-DB57-4A91-9004-D2295D3C5228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{292657EC-DB57-4A91-9004-D2295D3C5228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{292657EC-DB57-4A91-9004-D2295D3C5228}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

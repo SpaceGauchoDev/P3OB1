@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "MainMenuEmpleado";
+}
+
+<h2>Opciones Solicitante: </h2>
+<div class="list-group">
+    <div class="list-group-item">
+        <p>Ver todos mis proyectos presentados:</p>
+        <button onclick="location.href='@Url.Action("ProyectosPorSolicitante", "Solicitante")';return false;" class="btn btn-default">Ver Proyectos</button>
+    </div>
+
+    <div class="list-group-item">
+        <p>Presentar proyecto nuevo para evaluación:</p>
+        <button onclick="location.href='@Url.Action("PresentarProyecto", "Solicitante")';return false;" class="btn btn-default">Presentar Proyectos</button>
+    </div>
+
+    <div class="list-group-item">
+        <button onclick="location.href='@Url.Action("Logout", "Solicitante")';return false;" class="btn btn-default">Logout</button>
+    </div>
+</div>
+
