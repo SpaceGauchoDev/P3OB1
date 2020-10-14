@@ -5,3 +5,15 @@ D:\MyStuff\ORT\AP\S50\P3\Ob\Solucion\ConsolaTemp\ConsolaTemp\obj\Debug\ConsolaTe
 D:\MyStuff\ORT\AP\S50\P3\Ob\Solucion\ConsolaTemp\ConsolaTemp\obj\Debug\ConsolaTemp.csproj.CoreCompileInputs.cache
 D:\MyStuff\ORT\AP\S50\P3\Ob\Solucion\ConsolaTemp\ConsolaTemp\obj\Debug\ConsolaTemp.exe
 D:\MyStuff\ORT\AP\S50\P3\Ob\Solucion\ConsolaTemp\ConsolaTemp\obj\Debug\ConsolaTemp.pdb
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\ConsolaTemp\bin\Debug\ConsolaTemp.exe.config
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\ConsolaTemp\bin\Debug\ConsolaTemp.exe
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\ConsolaTemp\bin\Debug\ConsolaTemp.pdb
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\ConsolaTemp\bin\Debug\Dominio.dll
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\ConsolaTemp\bin\Debug\Dominio.pdb
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\ConsolaTemp\obj\Debug\ConsolaTemp.csprojAssemblyReference.cache
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\ConsolaTemp\obj\Debug\ConsolaTemp.csproj.CoreCompileInputs.cache
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\ConsolaTemp\obj\Debug\ConsolaTemp.csproj.CopyComplete
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\ConsolaTemp\obj\Debug\ConsolaTemp.exe
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\ConsolaTemp\obj\Debug\ConsolaTemp.pdb
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\ConsolaTemp\bin\Debug\Repositorios.dll
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\ConsolaTemp\bin\Debug\Repositorios.pdb

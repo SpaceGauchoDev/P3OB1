@@ -7,24 +7,42 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.SqlClient;
 using Dominio;
+using Repositorios;
 
 namespace ConsolaTemp
 {
-        class Program
+    class Program
+    {
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
-                // agregar referencia, References->Add Reference.../Assemblies/System.Configuration
-                string cs = ConfigurationManager.ConnectionStrings["miConexion"].ConnectionString;
-                SqlConnection sc = new SqlConnection();
-                sc.ConnectionString = cs;
 
-                LeerUnaCelda(sc);
-                Console.WriteLine();
-                LeerUnaColumna(sc);
+            // agregar referencia, References->Add Reference.../Assemblies/System.Configuration
+            //string cs = ConfigurationManager.ConnectionStrings["miConexion"].ConnectionString;
+            //SqlConnection sc = new SqlConnection();
+            //sc.ConnectionString = cs;
+
+            /*
+            LeerUnaCelda(sc);
+            Console.WriteLine();
+            LeerUnaColumna(sc);
+            */
+
 
             /*
             Usuario user = new Usuario()
+            {
+            CI = 42935324,
+            Pass = "123",
+            Rol = Usuario.E_Rol.Admin,
+            Nombre = "pepe",
+            Apellido = "le pew",
+            FechaDeNacimiento = new DateTime(1990, 2, 15),
+            Celular = 099879995
+            };
+            */
+
+            /*
+            Solicitante sol = new Solicitante()
             {
                 CI = 42935324,
                 Pass = "123",
@@ -36,50 +54,76 @@ namespace ConsolaTemp
             };
             */
 
-                Console.WriteLine("end");
-                Console.ReadLine();
-            }
+            /*
+            bool cedulaValida = sol.ValidarCI(32768558);
+            Console.WriteLine(cedulaValida);
+            */
 
+            RUsuario rUsuario= new RUsuario();
+            int ci = 230;
 
-            static void LeerUnaCelda(SqlConnection pSc)
+            if (rUsuario.FindById(ci) != null)
             {
-                // un comando que devuelve un valor de una celda
-                SqlCommand sqlCmd_BuscarCelda = new SqlCommand();
-                sqlCmd_BuscarCelda.CommandText = "SELECT Usuario.Nombre FROM Usuario WHERE Usuario.CI = 11";
-                sqlCmd_BuscarCelda.Connection = pSc;
-
-                // abro la conexion con el servidor
-                pSc.Open();
-
-                // ejecutar commando de un solo campo
-                string nombre = sqlCmd_BuscarCelda.ExecuteScalar().ToString();
-                Console.WriteLine(nombre);
-
-                // cierro la conexion con el servidor
-                pSc.Close();
+                Console.WriteLine("Encontro!");
             }
-
-
-            static void LeerUnaColumna(SqlConnection pSc)
+            else
             {
-                // un comando que devuelve un valor de una celda
-                SqlCommand sqlCmd_BuscarColumna = new SqlCommand();
-                sqlCmd_BuscarColumna.CommandText = "SELECT Usuario.Nombre FROM Usuario";
-                sqlCmd_BuscarColumna.Connection = pSc;
-
-                // abro la conexion con el servidor
-                pSc.Open();
-
-                SqlDataReader reader = sqlCmd_BuscarColumna.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    Console.WriteLine(reader["Nombre"].ToString());
-                }
-
-                // cierro la conexion con el servidor
-                pSc.Close();
+                Console.WriteLine("No encontro!");
             }
 
+
+            Console.WriteLine("end");
+            Console.ReadLine();
         }
+
+
+        static void LeerUnaCelda(SqlConnection pSc)
+        {
+            // un comando que devuelve un valor de una celda
+            SqlCommand sqlCmd_BuscarCelda = new SqlCommand();
+            sqlCmd_BuscarCelda.CommandText = "SELECT Usuario.Nombre FROM Usuario WHERE Usuario.CI = 200";
+            sqlCmd_BuscarCelda.Connection = pSc;
+
+            // abro la conexion con el servidor
+            pSc.Open();
+
+            // ejecutar commando de un solo campo
+            object scalarFound = sqlCmd_BuscarCelda.ExecuteScalar();
+
+            if (scalarFound != null) {
+                string nombre = scalarFound.ToString();
+                Console.WriteLine(nombre);
+            }
+            else
+            {
+                Console.WriteLine("User not found");
+            }
+
+            // cierro la conexion con el servidor
+            pSc.Close();
+        }
+
+
+        static void LeerUnaColumna(SqlConnection pSc)
+        {
+            // un comando que devuelve un valor de una celda
+            SqlCommand sqlCmd_BuscarColumna = new SqlCommand();
+            sqlCmd_BuscarColumna.CommandText = "SELECT Usuario.Nombre FROM Usuario";
+            sqlCmd_BuscarColumna.Connection = pSc;
+
+            // abro la conexion con el servidor
+            pSc.Open();
+
+            SqlDataReader reader = sqlCmd_BuscarColumna.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Console.WriteLine(reader["Nombre"].ToString());
+            }
+
+            // cierro la conexion con el servidor
+            pSc.Close();
+        }
+
+    }
 }

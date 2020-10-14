@@ -1,0 +1,9 @@
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\Repositorios\bin\Debug\Repositorios.dll
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\Repositorios\bin\Debug\Repositorios.pdb
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\Repositorios\bin\Debug\Dominio.dll
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\Repositorios\bin\Debug\Dominio.pdb
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\Repositorios\obj\Debug\Repositorios.csprojAssemblyReference.cache
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\Repositorios\obj\Debug\Repositorios.csproj.CoreCompileInputs.cache
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\Repositorios\obj\Debug\Repositorios.csproj.CopyComplete
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\Repositorios\obj\Debug\Repositorios.dll
+D:\MyStuff\ORT\AP\S50\P3\P3OB1\Solucion\Repositorios\obj\Debug\Repositorios.pdb
